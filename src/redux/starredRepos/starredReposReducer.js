@@ -4,12 +4,15 @@ import {
   FETCH_REPO_FAILURE,
 } from "./starredReposTypes";
 
+//Defining the initial starredRepos state
 const initialState = {
   isLoading: true,
-  repos: "",
+  page: 1,
+  repos: [],
   error: "",
 };
 
+//Defining the starredRepos
 const starredReposReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_REPO_REQUEST:
@@ -21,8 +24,9 @@ const starredReposReducer = (state = initialState, action) => {
     case FETCH_REPO_SECCESS:
       return {
         ...state,
+        page: state.page + 1,
         isLoading: false,
-        repos: action.payload,
+        repos: [...state.repos, ...action.payload],
         error: "",
       };
 

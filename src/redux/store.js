@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 
 const middleware = [thunk];
 
+//Creating the redux store and setting the thunk middleware for async calls
 const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(...middleware))

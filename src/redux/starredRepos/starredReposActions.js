@@ -5,6 +5,7 @@ import {
   FETCH_REPO_FAILURE,
 } from "./starredReposTypes";
 
+//Defining the starredRepos Actions
 export const fetchRepoRequest = () => {
   return {
     type: FETCH_REPO_REQUEST,
@@ -25,6 +26,8 @@ export const fetchRepoFailure = (error) => {
   };
 };
 
+//Call the github API using yesterdays date and the current page with a maximum output per page of 15
+//Note: the github API allows for only 10 requests per minute if you're not authenticated
 export const fetchRepos = (page) => {
   let date = new Date();
   date.setDate(date.getDate() - 1);

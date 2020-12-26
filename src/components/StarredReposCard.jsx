@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function StarredReposCard(props) {
+  let now = new Date();
+  const date_created = Math.ceil(
+    (now - new Date(props.created_at)) / (1000 * 3600 * 24)
+  );
   return (
     <div className="container bg-danger border rounded bg-light mx-auto mb-1">
       <div className="row">
@@ -33,7 +37,8 @@ export default function StarredReposCard(props) {
               </div>
             </div>
             <div className="col-6" style={{ color: "grey" }}>
-              Submitted {props.days} days ago by {props.name}
+              Submitted {date_created} {date_created == 1 ? "day" : "days"} ago
+              by {props.owner_name}
             </div>
           </div>
         </div>
