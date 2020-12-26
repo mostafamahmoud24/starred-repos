@@ -39,6 +39,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Libraries Used
+
+### Redux, React-Redux, Redux-Thunk
+
+While this is a small project that doesn't contain any complex state management I still wanted to demonstrate my capability of using redux, react-redux and redux-thunk for managing state with async function calls.
+
+### Bootstrap
+
+Was used for the majority of the styling due to it's easse of use and responsive features.
+
+### Material UI
+
+I used Material UI for the Loading component due to its versatility and wide variety of pre-built components that make life easier when working with React.
+
+### Axios
+
+I chose axios over fetch mainly due to the wider number of supported browsers.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
