@@ -5,8 +5,8 @@ import {
 } from "./starredReposTypes";
 
 const initialState = {
-  isLoading: false,
-  repos: [],
+  isLoading: true,
+  repos: "",
   error: "",
 };
 
@@ -22,7 +22,7 @@ const starredReposReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        repos: [...state.repos, action.payload],
+        repos: action.payload,
         error: "",
       };
 
