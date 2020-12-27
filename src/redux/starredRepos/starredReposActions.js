@@ -32,7 +32,6 @@ export const fetchRepos = (page) => {
   let date = new Date();
   date.setDate(date.getDate() - 1);
   const currentDate = date.toISOString().slice(0, 10);
-  console.log(currentDate);
   return (dispatch) => {
     dispatch(fetchRepoRequest());
     axios

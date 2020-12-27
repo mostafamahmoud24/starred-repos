@@ -18,8 +18,6 @@ export default function ReposContainer() {
     }
   };
 
-  console.log(repos);
-
   //calling page 1 of the github API
   const dispatch = useDispatch();
   useEffect(() => {
